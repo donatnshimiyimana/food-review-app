@@ -4,7 +4,7 @@
   "description": " a hot sauce",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node backend/server.js"
   },
   "author": "Donat NSHIMIYIMANA",
   "license": "ISC",
