@@ -27,7 +27,17 @@ app.use((req, res, next) => {
     next();
   });
 
+  app.use(express.static(path.join(__dirname, 'public')));
+
   app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+  res.send('Invalid Endpoint');
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.json(__dirname, 'public/index.html'));
+});
 
   app.use('/images', express.static(path.join(__dirname, 'images')));
 
