@@ -31,6 +31,10 @@ app.use((req, res, next) => {
 
   app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('Invalid Endpoint');
+});
+
 app.get('*', (req, res) => {
   res.sendFile(path.json(__dirname, 'public/index.html'));
 });
